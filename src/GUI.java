@@ -6,6 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.SwipeEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
@@ -33,9 +39,14 @@ public class GUI extends Application {
         initRootLayout();
     }
 
+    @FXML
+    private GridPane gridPane;
+
     public void initRootLayout() {
-        try {
-            // Load root layout from fxml file.
+
+            try {
+
+           /*// Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(GUI.class.getResource("Snowly-proto.fxml"));
             rootLayout = loader.load();
@@ -43,11 +54,29 @@ public class GUI extends Application {
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            primaryStage.show();*/
+
+
+                Parent root = FXMLLoader.load(getClass().getResource("Snowly-proto.fxml"));
+                primaryStage.setTitle("Snowly");
+                //primaryStage.setResizable(false);
+                primaryStage.setScene(new Scene(root));
+                primaryStage.show();
+
+                System.out.println(gridPane);
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+    }
+
+    public void handle(KeyEvent e) {
+
+        System.out.println("Test");
+        e.consume();
     }
 
 
 }
+
+
+
