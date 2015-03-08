@@ -18,7 +18,7 @@ public class ScreensFramework extends Application {
     public void start(Stage primaryStage) {
 
         ScreensController mainContainer = new ScreensController();
-        mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
+       mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
         mainContainer.loadScreen(ScreensFramework.screen2ID, ScreensFramework.screen2File);
 
         mainContainer.setScreen(ScreensFramework.screen1ID);

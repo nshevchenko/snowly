@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Rene Birkeland on 08.03.2015.
  */
-public class Screen1Controller implements Initializable, ControlledScreen {
+public class Screen2Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
 
@@ -28,11 +28,11 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     private Pane pageID2;
 
     @FXML
-    private void goToScreen2(KeyEvent e) {
-        if(e.getCode().toString().equals("RIGHT")) {
-            pageID1.setVisible(false);
-            pageID2.setVisible(true);
-            myController.setScreen(ScreensFramework.screen2ID);
+    private void goToScreen1(KeyEvent e) {
+        if(e.getCode().toString().equals("LEFT")) {
+            pageID1.setVisible(true);
+            pageID2.setVisible(false);
+            myController.setScreen(ScreensFramework.screen1ID);
         }
     }
 }
