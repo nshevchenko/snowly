@@ -42,10 +42,11 @@ public class GUI extends Application {
     @FXML
     private GridPane gridPane;
 
+    private Parent root;
+
+
     public void initRootLayout() {
-
             try {
-
            /*// Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(GUI.class.getResource("Snowly-proto.fxml"));
@@ -56,20 +57,43 @@ public class GUI extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();*/
 
-
-                Parent root = FXMLLoader.load(getClass().getResource("Snowly-proto.fxml"));
+                //Load root layout from fxml file.
+                root = FXMLLoader.load(getClass().getResource("Snowly-proto.fxml"));
                 primaryStage.setTitle("Snowly");
                 //primaryStage.setResizable(false);
+
+                // Show the scene containing the root layout.
                 primaryStage.setScene(new Scene(root));
                 primaryStage.show();
 
-                System.out.println(gridPane);
             } catch(IOException e) {
                 e.printStackTrace();
             }
     }
 
-    public void handle(KeyEvent e) {
+    @FXML
+    private Pane pageID1;
+    @FXML
+    private Pane pageID2;
+
+    //Handle keyboard events
+    public void handleKeyEvent(KeyEvent e) {
+        if(e.getCode().toString().equals("RIGHT")) {
+            pageID1.setVisible(false);
+            pageID2.setVisible(true);
+            try {
+                root = FXMLLoader.load(getClass().getResource("hard-packed.fxml"));
+                primaryStage.setScene(new Scene(root));
+                primaryStage.show();
+            } catch(IOException e1) {
+                e1.printStackTrace();
+            }
+
+        } else if(e.getCode().toString().equals("LEFT")) {
+            pageID2.setVisible(false);
+            pageID1.setVisible(true);
+        }
+
 
         System.out.println("Test");
         e.consume();
