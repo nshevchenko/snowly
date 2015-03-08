@@ -11,7 +11,7 @@ public class ScreensFramework extends Application {
     public static String screen1ID = "main";
     public static String screen1File = "Snowly-proto.fxml";
     public static String screen2ID = "screen2";
-    public static String screen2File = "hard-packed.fxml";
+    public static String screen2File = "hard-packed2.fxml";
 
 
     @Override

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="mainPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen2Controller">
+   <children>
+      <GridPane id="gridPane" fx:id="gridPane" focusTraversable="true" onKeyReleased="#goToScreen1" prefHeight="480.0" prefWidth="320.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="226.2921600341797" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="421.78601837158203" minHeight="10.0" prefHeight="415.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane id="top-pane" prefHeight="65.0" prefWidth="320.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Text fill="WHITE" layoutX="89.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Snowly" textAlignment="CENTER" wrappingWidth="157.68292617797852">
+                     <font>
+                        <Font name="Euphemia UCAS" size="39.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutY="57.0" prefHeight="8.0" prefWidth="320.0">
+                     <children>
+                        <Pane id="pageBar1" fx:id="pageID1" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" visible="false" />
+                        <Pane id="pageBar2" fx:id="pageID2" minWidth="-Infinity" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" />
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="27.0" fitWidth="59.0" layoutX="21.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/DkubNkp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="content-pane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
+               <children>
+                  <Pane fx:id="paneTest" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fitHeight="415.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/hard_packed.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hard packed" wrappingWidth="259.2265625">
+                           <font>
+                              <Font name="Euphemia UCAS" size="48.0" />
+                           </font>
+                        </Text>
+                        <AnchorPane layoutX="145.0" layoutY="367.0" prefHeight="34.0" prefWidth="31.0">
+                           <children>
+                              <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/down_arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</Pane>

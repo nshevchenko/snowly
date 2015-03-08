@@ -30,8 +30,7 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(KeyEvent e) {
         if(e.getCode().toString().equals("RIGHT")) {
-            pageID1.setVisible(false);
-            pageID2.setVisible(true);
+
             myController.setScreen(ScreensFramework.screen2ID);
         }
     }
