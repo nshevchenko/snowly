@@ -22,8 +22,6 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        Image buttonImg = new Image(getClass().getResourceAsStream("img/btnimg.png"), 59, 27, false, true);
-        toggle.setGraphic(new ImageView(buttonImg));
     }
 
     public void setScreenParent(ScreensController screenParent) {
