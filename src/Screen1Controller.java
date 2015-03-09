@@ -2,6 +2,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,6 +34,19 @@ public class Screen1Controller implements Initializable, ControlledScreen {
 
             myController.setScreen(ScreensFramework.screen2ID);
         }
+    }
+
+    @FXML
+    private void goToDownScreen(KeyEvent e) {
+        if(e.getCode().toString().equals("DOWN")) {
+
+            //myController.setScreen(ScreensFramework.screen2ID);
+        }
+    }
+
+    @FXML
+    private void menu(ActionEvent e) {
+       System.out.println("Test");
     }
 }
 
