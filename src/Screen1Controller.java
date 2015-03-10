@@ -45,6 +45,9 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     @FXML
     private Pane pageID2;
 
+    //Which screen we are on
+    int screenNr = 0;
+
     @FXML
     private void goToScreen2(KeyEvent e) {
         if(e.getCode().toString().equals("RIGHT")) {
@@ -55,6 +58,9 @@ public class Screen1Controller implements Initializable, ControlledScreen {
                 oldPaneContent.setAll(contentPane.getChildren());
                 contentPane.getChildren().clear();
                 contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("hard-packed.fxml")));
+                pageID1.setVisible(false);
+                pageID2.setVisible(true);
+                screenNr++;
                 //contentPane = FXMLLoader.load(getClass().getResource("hard-packed.fxml"));
             } catch (IOException ioe) {
                 ioe.printStackTrace();
@@ -62,10 +68,14 @@ public class Screen1Controller implements Initializable, ControlledScreen {
             }
         }
 
-        if (e.getCode().toString().equals("LEFT")) {
+        if (e.getCode().toString().equals("LEFT") || screenNr < 0) {
            try {
+               screenNr--;
                contentPane.getChildren().clear();
                contentPane.getChildren().setAll(oldPaneContent);
+               pageID1.setVisible(true);
+               pageID2.setVisible(false);
+
            } catch (NullPointerException npe) {
 
            }
