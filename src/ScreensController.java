@@ -52,7 +52,7 @@ public class ScreensController  extends StackPane {
     //one screen the new screen is been added second, and then the current screen is removed.
     // If there isn't any screen being displayed, the new screen is just added to the root.
     public boolean setScreen(final String name) {
-        if (screens.get(name) != null) {   //screen loaded
+        try {
             final DoubleProperty opacity = opacityProperty();
 
             if (!getChildren().isEmpty()) {    //if there is more than one screen
@@ -80,8 +80,9 @@ public class ScreensController  extends StackPane {
                 fadeIn.play();
             }
             return true;
-        } else {
+        } catch (NullPointerException e) {
             System.out.println("screen hasn't been loaded!!! \n");
+            e.printStackTrace();
             return false;
         }
 
