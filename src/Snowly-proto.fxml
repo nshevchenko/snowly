@@ -41,7 +41,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane id="content-pane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
+            <Pane fx:id="contentPane" id="content-pane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
                <children>
                   <Pane fx:id="paneTest" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="320.0">
                      <children>
