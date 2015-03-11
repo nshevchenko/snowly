@@ -128,6 +128,16 @@ public class Screen1Controller implements Initializable, ControlledScreen {
            } catch (NullPointerException npe) {
 
            }
+            if (e.getCode().toString().equals("DOWN")) {
+                System.out.println("Down");
+               /* try {
+
+                    }
+
+                } catch (NullPointerException npe) {
+
+                }*/
+            }
         }
     }
 

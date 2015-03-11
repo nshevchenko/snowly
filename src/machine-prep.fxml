@@ -17,5 +17,10 @@
             <Font name="Euphemia UCAS" size="48.0" />
          </font>
       </Text>
+      <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="140.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/down_arrow.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

@@ -57,15 +57,11 @@
                               <Font name="Euphemia UCAS" size="48.0" />
                            </font>
                         </Text>
-                        <AnchorPane layoutX="145.0" layoutY="367.0" prefHeight="34.0" prefWidth="31.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/down_arrow.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
+                        <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="140.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/down_arrow.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </Pane>
                </children>
