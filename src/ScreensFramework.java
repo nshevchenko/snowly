@@ -12,14 +12,17 @@ public class ScreensFramework extends Application {
     public static String screen1File = "Snowly-proto.fxml";
     public static String screen2ID = "screen2";
     public static String screen2File = "hard-packed.fxml";
+    public static String screenDownID = "down";
+    public static String screenDownFile = "list-view.fxml";
 
 
     @Override
     public void start(Stage primaryStage) {
 
         ScreensController mainContainer = new ScreensController();
-       mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
+        mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
         mainContainer.loadScreen(ScreensFramework.screen2ID, ScreensFramework.screen2File);
+        mainContainer.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
 
         mainContainer.setScreen(ScreensFramework.screen1ID);
 

@@ -100,16 +100,13 @@ public class Screen1Controller implements Initializable, ControlledScreen {
             if (currentTab > 0)
                 currentTab--;
         }
+
+        if(e.getCode().toString().equals("DOWN")) {
+            myController.setScreen(ScreensFramework.screenDownID);
+        }
         openTab();
     }
 
-    @FXML
-    private void goToDownScreen(KeyEvent e) {
-        if(e.getCode().toString().equals("DOWN")) {
-
-            //myController.setScreen(ScreensFramework.screen2ID);
-        }
-    }
 
     @FXML
     private void pressMenuBtn(ActionEvent e)

@@ -5,9 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#goToScreen1" prefHeight="415.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen2Controller">
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8">
    <children>
-      <ImageView fitHeight="415.0" fitWidth="320.0" focusTraversable="true" onKeyReleased="#goToScreen1" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="415.0" fitWidth="320.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/machine-prep.png" />
          </image>
