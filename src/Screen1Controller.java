@@ -19,18 +19,21 @@ import java.util.ResourceBundle;
 public class Screen1Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
+    @FXML private Pane screenRoot;
     @FXML private Button toggle;
     @FXML private Pane contentPane;
     @FXML private ObservableList<Node> oldPaneContent;
+
 
     @FXML private Pane pageID1;
     @FXML private Pane pageID2;
     @FXML private Pane pageID3;
     @FXML private Pane pageID4;
 
-    String[] tabsFXML = {"powder_tab.fxml", "hard-packed.fxml", "machine-prep.fxml", "terrain-park.fxml", "terrain-park.fxml"};
+    @FXML private Pane menuPane;
+    @FXML private Button menuCloseButton;
 
-    
+    private String[] tabsFXML = {"powder_tab.fxml", "hard-packed.fxml", "machine-prep.fxml", "terrain-park.fxml", "terrain-park.fxml"};
     private final int TAB_COUNT = 4;
     private int currentTab;
 
@@ -43,6 +46,7 @@ public class Screen1Controller implements Initializable, ControlledScreen {
         } catch( IOException e) {
             System.out.println(e.toString());
         }
+        menuPane.setVisible(false);
     }
 
     public void setScreenParent(ScreensController screenParent) {
@@ -108,8 +112,16 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     }
 
     @FXML
-    private void menu(ActionEvent e) {
-       System.out.println("Test");
+    private void pressMenuBtn(ActionEvent e)
+    {
+        menuPane.setVisible(true);
+        System.out.println("Test");
     }
-}
 
+    @FXML
+    public void closeMenuBtn(ActionEvent e)
+    {
+        menuPane.setVisible(false);
+    }
+
+}
