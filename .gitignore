@@ -4,4 +4,4 @@ _DS_Store*
 .idea/
 src/.DS_Store
 out/*
-out/production/
+out/production/GUI
