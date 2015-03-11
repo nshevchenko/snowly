@@ -1,9 +1,14 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+
 import java.net.URL;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
 /**
@@ -13,28 +18,23 @@ public class Screen2Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
 
+    @FXML
+    private ListView<String> listView;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ObservableList<String> data = FXCollections.observableArrayList(
+                "T", "test", "sdfs", "sdfsdf"
+        );
+        listView.setItems(data);
     }
 
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
     }
 
-    @FXML
-    private Pane pageID1;
-    @FXML
-    private Pane pageID2;
 
-    @FXML
-    private void goToScreen1(KeyEvent e) {
-        if(e.getCode().toString().equals("LEFT")) {
-            System.out.println("left");
-            myController.setScreen(ScreensFramework.screen1ID);
-            pageID1.setVisible(true);
-            pageID2.setVisible(false);
-        }
-    }
+
+
 }
 
