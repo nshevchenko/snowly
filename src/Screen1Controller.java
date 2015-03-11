@@ -44,6 +44,10 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     private Pane pageID1;
     @FXML
     private Pane pageID2;
+    @FXML
+    private Pane pageID3;
+    @FXML
+    private Pane pageID4;
 
     //Which screen we are on
     int screenNr = 1;
@@ -70,6 +74,8 @@ public class Screen1Controller implements Initializable, ControlledScreen {
                         contentPane.getChildren().clear();
                         contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("machine-prep.fxml")));
                         screenNr++;
+                        pageID2.setVisible(false);
+                        pageID3.setVisible(true);
                         break;
 
                     case 3 :
@@ -77,6 +83,8 @@ public class Screen1Controller implements Initializable, ControlledScreen {
                         contentPane.getChildren().clear();
                         contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("terrain-park.fxml")));
                         screenNr++;
+                        pageID3.setVisible(false);
+                        pageID4.setVisible(true);
                         break;
                 }
 
@@ -103,16 +111,17 @@ public class Screen1Controller implements Initializable, ControlledScreen {
                        screenNr--;
                        contentPane.getChildren().clear();
                        contentPane.getChildren().setAll(oldPaneContent);
-                       pageID1.setVisible(true);
-                       pageID2.setVisible(false);
+                       pageID2.setVisible(true);
+                       pageID3.setVisible(false);
+
                        break;
 
                    case 4 :
                        screenNr--;
                        contentPane.getChildren().clear();
                        contentPane.getChildren().setAll(oldPaneContent);
-                       pageID1.setVisible(true);
-                       pageID2.setVisible(false);
+                       pageID3.setVisible(true);
+                       pageID4.setVisible(false);
                        break;
                }
 

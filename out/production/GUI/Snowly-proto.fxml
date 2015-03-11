@@ -28,6 +28,8 @@
                      <children>
                         <Pane id="pageBar1" fx:id="pageID1" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" />
                         <Pane id="pageBar2" fx:id="pageID2" minWidth="-Infinity" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" visible="false" />
+                        <Pane id="pageBar2" fx:id="pageID3" layoutX="90.0" layoutY="10.0" minWidth="-Infinity" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" visible="false" />
+                        <Pane id="pageBar2" fx:id="pageID4" layoutX="170.0" layoutY="10.0" minWidth="-Infinity" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: orange;" visible="false" />
                      </children>
                   </HBox>
                   <Button id="toggle-button" fx:id="toggle" layoutY="4.0" mnemonicParsing="false" onAction="#menu" prefHeight="51.0" prefWidth="79.0" style="-fx-background-color: black;">
@@ -41,7 +43,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane fx:id="contentPane" id="content-pane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
+            <Pane id="content-pane" fx:id="contentPane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
                <children>
                   <Pane fx:id="paneTest" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="320.0">
                      <children>
