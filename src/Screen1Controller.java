@@ -87,16 +87,13 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(KeyEvent e) {
         if(e.getCode().toString().equals("RIGHT")) {
-            if (currentTab > TAB_COUNT - 1)
-                currentTab = 0;
-            else
+            if (currentTab < TAB_COUNT - 1)
                 currentTab++;
+
         }
 
         if (e.getCode().toString().equals("LEFT")) {
-            if (currentTab <= 0)
-                currentTab = TAB_COUNT - 1;
-            else
+            if (currentTab > 0)
                 currentTab--;
         }
         openTab();
