@@ -3,4 +3,5 @@ _DS_Store*
 .zip
 .idea/
 src/.DS_Store
-out/
+out/*
+out/production/GUI
