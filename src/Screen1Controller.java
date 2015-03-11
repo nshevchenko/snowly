@@ -6,17 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import sun.jvm.hotspot.oops.NarrowOopField;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 /**
