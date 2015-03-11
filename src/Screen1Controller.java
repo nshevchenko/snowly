@@ -46,7 +46,7 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     private Pane pageID2;
 
     //Which screen we are on
-    int screenNr = 0;
+    int screenNr = 1;
 
     @FXML
     private void goToScreen2(KeyEvent e) {
@@ -55,12 +55,31 @@ public class Screen1Controller implements Initializable, ControlledScreen {
             System.out.println("right");
             //myController.setScreen(ScreensFramework.screen2ID);
             try {
-                oldPaneContent.setAll(contentPane.getChildren());
-                contentPane.getChildren().clear();
-                contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("hard-packed.fxml")));
-                pageID1.setVisible(false);
-                pageID2.setVisible(true);
-                screenNr++;
+                switch(screenNr) {
+                    case 1 :
+                        oldPaneContent.setAll(contentPane.getChildren());
+                        contentPane.getChildren().clear();
+                        contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("hard-packed.fxml")));
+                        pageID1.setVisible(false);
+                        pageID2.setVisible(true);
+                        screenNr++;
+                        break;
+
+                    case 2 :
+                        oldPaneContent.setAll(contentPane.getChildren());
+                        contentPane.getChildren().clear();
+                        contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("machine-prep.fxml")));
+                        screenNr++;
+                        break;
+
+                    case 3 :
+                        oldPaneContent.setAll(contentPane.getChildren());
+                        contentPane.getChildren().clear();
+                        contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("terrain-park.fxml")));
+                        screenNr++;
+                        break;
+                }
+
                 //contentPane = FXMLLoader.load(getClass().getResource("hard-packed.fxml"));
             } catch (IOException ioe) {
                 ioe.printStackTrace();
@@ -68,13 +87,34 @@ public class Screen1Controller implements Initializable, ControlledScreen {
             }
         }
 
-        if (e.getCode().toString().equals("LEFT") || screenNr < 0) {
+        if (e.getCode().toString().equals("LEFT")) {
+            System.out.println("left");
            try {
-               screenNr--;
-               contentPane.getChildren().clear();
-               contentPane.getChildren().setAll(oldPaneContent);
-               pageID1.setVisible(true);
-               pageID2.setVisible(false);
+               switch(screenNr) {
+                   case 2 :
+                       screenNr--;
+                       contentPane.getChildren().clear();
+                       contentPane.getChildren().setAll(oldPaneContent);
+                       pageID1.setVisible(true);
+                       pageID2.setVisible(false);
+                       break;
+
+                   case 3 :
+                       screenNr--;
+                       contentPane.getChildren().clear();
+                       contentPane.getChildren().setAll(oldPaneContent);
+                       pageID1.setVisible(true);
+                       pageID2.setVisible(false);
+                       break;
+
+                   case 4 :
+                       screenNr--;
+                       contentPane.getChildren().clear();
+                       contentPane.getChildren().setAll(oldPaneContent);
+                       pageID1.setVisible(true);
+                       pageID2.setVisible(false);
+                       break;
+               }
 
            } catch (NullPointerException npe) {
 
