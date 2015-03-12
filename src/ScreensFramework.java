@@ -14,6 +14,8 @@ public class ScreensFramework extends Application {
     public static String screen2File = "hard-packed.fxml";
     public static String screenDownID = "down";
     public static String screenDownFile = "list-view.fxml";
+    public static String screenResortID = "resort";
+    public static String screenResortFile = "resort.fxml";
 
 
     @Override
@@ -23,6 +25,7 @@ public class ScreensFramework extends Application {
         mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
         mainContainer.loadScreen(ScreensFramework.screen2ID, ScreensFramework.screen2File);
         mainContainer.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
+        mainContainer.loadScreen(ScreensFramework.screenResortID, ScreensFramework.screenResortFile);
 
         mainContainer.setScreen(ScreensFramework.screen1ID);
 
