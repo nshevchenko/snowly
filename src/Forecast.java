@@ -10,6 +10,7 @@ public class Forecast {
     private int code, high, low;
     private String day, date, text;
 
+
     public Forecast(int code, String date, String day, int high, int low, String text) {
         this.code = code;
         this.date = date;
