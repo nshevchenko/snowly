@@ -31,5 +31,11 @@ public class Screen2Controller implements Initializable, ControlledScreen {
         myController = screenParent;
     }
 
+    public void goToScreen(KeyEvent e) {
+        if(e.getCode().toString().equals("ENTER")) {
+            myController.setScreen("resort");
+        }
+    }
+
 }
 
