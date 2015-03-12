@@ -15,7 +15,7 @@
                 </ImageView>
                 <Text fill="WHITE" layoutX="14.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powder" wrappingWidth="173.2265625">
                     <font>
-                        <Font name="Raleway Regular" size="48.0" />
+                        <Font name="Europe Underground Light" size="48.0" />
                     </font>
                 </Text>
                 <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="140.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
