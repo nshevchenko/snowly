@@ -29,7 +29,6 @@ public class Screen3Controller implements Initializable, ControlledScreen {
     }
 
     public void goToScreen(KeyEvent e) {
-        System.out.println("up");
         if(e.getCode().toString().equals("UP")) {
             myController.setScreen(ScreensFramework.screenDownID);
         }
