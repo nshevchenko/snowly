@@ -5,6 +5,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 
 import javafx.scene.image.ImageView;
+
+import javafx.scene.input.KeyEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,8 +25,15 @@ public class Screen3Controller implements Initializable, ControlledScreen {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         resortImage.setImage(new Image("/img/fjell3.jpg"));
+        day1.setText("Test");
     }
 
+    public void goToScreen(KeyEvent e) {
+        System.out.println("up");
+        if(e.getCode().toString().equals("UP")) {
+            myController.setScreen(ScreensFramework.screenDownID);
+        }
+    }
 
 
     @FXML private ImageView resortImage;
