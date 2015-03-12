@@ -18,7 +18,7 @@ public class ScreensFramework extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(true);
 
         //Loads all the screens
         ScreensController mainContainer = new ScreensController();
@@ -31,7 +31,7 @@ public class ScreensFramework extends Application {
         mainContainer.setScreen(ScreensFramework.screen1ID);
         Group root = new Group();
         root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 320, 480);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
