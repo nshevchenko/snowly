@@ -7,6 +7,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.fxml.LoadException;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,14 +18,21 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     ScreensController myController;
 
     @FXML
-    private ListView<String> listView;
+    private ListView<Pane> listView;
 
     public void initialize(URL url, ResourceBundle rb) {
         //loop
         //data.add(FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
-        ObservableList<String> data = FXCollections.observableArrayList(
-                "sdfs", "sdfsdf", "sdfsdf"
-        );
+        ObservableList<Pane> data = FXCollections.observableArrayList();
+        ResortData resort = ResortData.getInstance();
+
+            while (resort.hasResort())
+                    try {
+                        data.add((Pane) FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
+                    } catch (IOException ioe) {
+                        ioe.printStackTrace();
+                        System.out.println("complete disaster");
+                    }
         listView.setItems(data);
     }
 

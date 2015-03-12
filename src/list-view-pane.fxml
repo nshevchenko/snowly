@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
-
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListViewPaneController">
    <children>
       <ImageView fx:id="resortImage" fitHeight="150.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="resortName" layoutX="14.0" layoutY="107.0" prefHeight="37.0" prefWidth="124.0">
+      <Label fx:id="resortName" layoutY="107.0" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: black; -fx-opacity: 40%;" textFill="WHITE">
          <font>
-            <Font name="Euphemia UCAS" size="13.0" />
+            <Font name="Verdana" size="26.0" />
          </font>
       </Label>
       <GridPane layoutY="144.0" prefHeight="106.0" prefWidth="320.0">
@@ -25,19 +24,19 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="record1" prefHeight="18.0" prefWidth="148.0">
+            <Label fx:id="record1" prefHeight="33.0" prefWidth="316.0" textFill="#949393">
                <font>
-                  <Font name="Euphemia UCAS" size="13.0" />
+                  <Font name="Verdana" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="record2" GridPane.rowIndex="1">
+            <Label fx:id="record2" prefHeight="31.0" prefWidth="312.0" textFill="#949393" GridPane.rowIndex="1">
                <font>
-                  <Font name="Euphemia UCAS" size="13.0" />
+                  <Font name="Verdana" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="record3" GridPane.rowIndex="2">
+            <Label fx:id="record3" prefHeight="33.0" prefWidth="312.0" textFill="#949393" GridPane.rowIndex="2">
                <font>
-                  <Font name="Euphemia UCAS" size="13.0" />
+                  <Font name="Verdana" size="19.0" />
                </font>
             </Label>
          </children>
