@@ -20,6 +20,8 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     @FXML
     private ListView<Pane> listView;
 
+    @FXML private Pane listViewParent;
+
     public void initialize(URL url, ResourceBundle rb) {
         //loop
         //data.add(FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
