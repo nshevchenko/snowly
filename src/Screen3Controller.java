@@ -10,24 +10,23 @@ import javafx.scene.input.KeyEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Rene on 11/03/2015.
- */
+
 public class Screen3Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
 
-    @Override
+    //Sets parent screen.
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
     }
 
-    @Override
+
     public void initialize(URL location, ResourceBundle resources) {
         resortImage.setImage(new Image("/img/fjell3.jpg"));
         day1.setText("Test");
     }
 
+    //Key listener for keyboard input, to navigate the app.
     public void goToScreen(KeyEvent e) {
         if(e.getCode().toString().equals("UP")) {
             myController.setScreen(ScreensFramework.screenDownID);
