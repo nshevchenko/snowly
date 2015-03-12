@@ -18,6 +18,7 @@ public class ScreensFramework extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        primaryStage.setResizable(false);
 
         //Loads all the screens
         ScreensController mainContainer = new ScreensController();

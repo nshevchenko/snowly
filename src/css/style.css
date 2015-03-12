@@ -1,7 +1,8 @@
-/*.toggle-button {*/
-    /*-fx-graphic: url("../img/btnimg.png");*/
-/*}*/
+@font-face {
+    font-family: 'Euro';
+    src: url('EuropeUnderground_light.ttf');
+}
 
-/*.toggle-button:selected {*/
-    /*-fx-graphic: url("../img/DkubNkp.png");*/
-/*}*/
+.text {
+    font-family: "Euro";
+}
