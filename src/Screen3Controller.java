@@ -25,6 +25,8 @@ public class Screen3Controller implements Initializable, ControlledScreen {
         resortImage.setImage(new Image("/img/fjell3.jpg"));
     }
 
+
+
     @FXML private ImageView resortImage;
     @FXML private HBox forecast;
     @FXML private Label label1;
