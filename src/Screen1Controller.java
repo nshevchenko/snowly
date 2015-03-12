@@ -13,9 +13,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Group 6 on 08.03.2015.
- */
+
+
+//Controls the first screen, with the 4 options for different snow types
 public class Screen1Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
@@ -37,9 +37,7 @@ public class Screen1Controller implements Initializable, ControlledScreen {
     private final int TAB_COUNT = 4;
     private int currentTab;
 
-    @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         oldPaneContent = FXCollections.observableArrayList();
         try {
             contentPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("powder_tab.fxml")));
@@ -49,6 +47,7 @@ public class Screen1Controller implements Initializable, ControlledScreen {
         menuPane.setVisible(false);
     }
 
+    //Sets parent screen.
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
     }
@@ -88,8 +87,9 @@ public class Screen1Controller implements Initializable, ControlledScreen {
         pageID4.setVisible(false);
     }
 
+    //Key listener for keyboard input, to navigate the app.
     @FXML
-    private void goToScreen2(KeyEvent e) {
+    private void goToScreen(KeyEvent e) {
         if(e.getCode().toString().equals("RIGHT")) {
             if (currentTab < TAB_COUNT - 1)
                 currentTab++;

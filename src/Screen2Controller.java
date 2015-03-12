@@ -10,9 +10,6 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Rene Birkeland on 08.03.2015.
- */
 public class Screen2Controller implements Initializable, ControlledScreen {
 
     ScreensController myController;
@@ -20,7 +17,6 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     @FXML
     private ListView<String> listView;
 
-    @Override
     public void initialize(URL url, ResourceBundle rb) {
         //loop
         //data.add(FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
@@ -30,10 +26,12 @@ public class Screen2Controller implements Initializable, ControlledScreen {
         listView.setItems(data);
     }
 
+    //Sets parent screen.
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
     }
 
+    //Key listener for keyboard input, to navigate the app.
     public void goToScreen(KeyEvent e) {
         if(e.getCode().toString().equals("ENTER")) {
             myController.setScreen(ScreensFramework.screenResortID);
