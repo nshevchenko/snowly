@@ -9,31 +9,41 @@
    <children>
       <ImageView fx:id="resortImage" fitHeight="182.0" fitWidth="327.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="label1" layoutX="32.0" layoutY="294.0" text="Label" />
-      <HBox fx:id="forecast" layoutY="180.0" prefHeight="84.0" prefWidth="320.0">
+      <HBox fx:id="forecast" layoutY="180.0" prefHeight="93.0" prefWidth="320.0">
          <children>
             <Pane fx:id="forecast1" prefHeight="84.0" prefWidth="61.0">
                <children>
-                  <Label fx:id="temp1" layoutX="20.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="day1" layoutX="16.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="temp1" layoutX="18.0" layoutY="71.0" text="Label" />
+                  <ImageView fx:id="weatherImg1" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
             <Pane fx:id="forecast2" prefHeight="84.0" prefWidth="67.0">
                <children>
-                  <Label fx:id="temp2" layoutX="19.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="day2" layoutX="19.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="temp2" layoutX="19.0" layoutY="71.0" text="Label" />
+                  <ImageView fx:id="weatherImg2" fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
             <Pane fx:id="forecast3" prefHeight="84.0" prefWidth="69.0">
                <children>
-                  <Label fx:id="temp3" layoutX="18.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="temp3" layoutX="20.0" layoutY="71.0" text="Label" />
+                  <ImageView fx:id="weatherImg3" fitHeight="35.0" fitWidth="35.0" layoutX="16.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="day3" layoutX="20.0" layoutY="6.0" text="Label" />
                </children>
             </Pane>
             <Pane fx:id="forecast4" prefHeight="84.0" prefWidth="67.0">
                <children>
-                  <Label fx:id="temp4" layoutX="17.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="temp4" layoutX="19.0" layoutY="71.0" text="Label" />
+                  <ImageView fx:id="weatherImg4" fitHeight="35.0" fitWidth="35.0" layoutX="18.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="day4" layoutX="22.0" layoutY="6.0" text="Label" />
                </children>
             </Pane>
             <Pane fx:id="forecast5" prefHeight="84.0" prefWidth="66.0">
                <children>
-                  <Label fx:id="temp5" layoutX="17.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="temp5" layoutX="18.0" layoutY="71.0" text="Label" />
+                  <ImageView fx:id="weatherImg5" fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="day5" layoutX="18.0" layoutY="6.0" text="Label" />
                </children>
             </Pane>
          </children>

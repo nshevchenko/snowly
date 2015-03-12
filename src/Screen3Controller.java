@@ -28,7 +28,24 @@ public class Screen3Controller implements Initializable, ControlledScreen {
 
 
     @FXML private ImageView resortImage;
+
     @FXML private HBox forecast;
+    @FXML private Label day1;
+    @FXML private Label day2;
+    @FXML private Label day3;
+    @FXML private Label day4;
+    @FXML private Label day5;
+    @FXML private Label temp1;
+    @FXML private Label temp2;
+    @FXML private Label temp3;
+    @FXML private Label temp4;
+    @FXML private Label temp5;
+    @FXML private ImageView weatherImg1;
+    @FXML private ImageView weatherImg2;
+    @FXML private ImageView weatherImg3;
+    @FXML private ImageView weatherImg4;
+    @FXML private ImageView weatherImg5;
+
     @FXML private Label label1;
     @FXML private Label label2;
     @FXML private Label label3;
