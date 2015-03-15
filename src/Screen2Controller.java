@@ -23,6 +23,8 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     @FXML private Pane listViewParent;
 
     public void initialize(URL url, ResourceBundle rb) {
+        listView.getStylesheets().add("css/kill-scroll-bar.css");
+        listView.setPrefWidth(320);
         //loop
         //data.add(FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
         ObservableList<Pane> data = FXCollections.observableArrayList();

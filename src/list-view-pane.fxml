@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListViewPaneController">
+<Pane maxHeight="-Infinity" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListViewPaneController">
    <children>
       <ImageView fx:id="resortImage" fitHeight="150.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="resortName" layoutY="107.0" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: black; -fx-opacity: 40%;" textFill="WHITE">
+      <Label fx:id="resortName" layoutY="107.0" prefHeight="37.0" prefWidth="158.0" style="-fx-background-color: black; -fx-opacity: 55%;" textFill="WHITE">
          <font>
             <Font name="Verdana" size="26.0" />
          </font>
       </Label>
-      <GridPane layoutY="144.0" prefHeight="106.0" prefWidth="320.0">
+      <GridPane layoutY="144.0" prefHeight="106.0" prefWidth="300.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -24,17 +24,17 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="record1" prefHeight="33.0" prefWidth="316.0" textFill="#949393">
+            <Label fx:id="record1" prefHeight="33.0" prefWidth="300.0" textFill="#949393">
                <font>
                   <Font name="Verdana" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="record2" prefHeight="31.0" prefWidth="312.0" textFill="#949393" GridPane.rowIndex="1">
+            <Label fx:id="record2" prefHeight="31.0" prefWidth="300.0" textFill="#949393" GridPane.rowIndex="1">
                <font>
                   <Font name="Verdana" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="record3" prefHeight="33.0" prefWidth="312.0" textFill="#949393" GridPane.rowIndex="2">
+            <Label fx:id="record3" prefHeight="33.0" prefWidth="300.0" textFill="#949393" GridPane.rowIndex="2">
                <font>
                   <Font name="Verdana" size="19.0" />
                </font>

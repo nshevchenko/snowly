@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane id="mainPane" stylesheets="@css/style.css" fx:id="screenRoot" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen1Controller">
+<Pane id="mainPane" fx:id="screenRoot" prefHeight="480.0" prefWidth="320.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen1Controller">
    <children>
       <GridPane id="gridPane" fx:id="gridPane" focusTraversable="true" onKeyReleased="#goToScreen" prefHeight="480.0" prefWidth="320.0">
         <columnConstraints>
@@ -43,20 +43,23 @@
                   </Button>
                </children>
             </Pane>
-             <Pane fx:id="contentPane" id="content-pane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
+             <Pane id="content-pane" fx:id="contentPane" mouseTransparent="true" prefHeight="415.0" prefWidth="320.0" GridPane.rowIndex="1">
 
              </Pane>
          </children>
       </GridPane>
    </children>
-    <Pane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="250.0" style="-fx-background-color: #C2C2C2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-        <children>
-            <Label layoutX="18.0" layoutY="20.0" prefHeight="20.0" prefWidth="134.0" text="MENU">
-                <font>
-                    <Font size="16.0" />
-                </font></Label>
-            <Button fx:id="menuCloseButton" onAction="#closeMenuBtn" layoutX="196.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="40.0" text="&lt;" />
-            <Separator layoutX="18.0" layoutY="51.0" prefHeight="3.0" prefWidth="219.0" />
-        </children>
-    </Pane>
+   <children>
+       <Pane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="250.0" style="-fx-background-color: #C2C2C2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+               <Label layoutX="18.0" layoutY="20.0" prefHeight="20.0" prefWidth="134.0" text="MENU">
+                   <font>
+                       <Font size="16.0" />
+                   </font>
+            </Label>
+               <Button fx:id="menuCloseButton" layoutX="196.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeMenuBtn" prefHeight="31.0" prefWidth="40.0" text="&lt;" />
+               <Separator layoutX="18.0" layoutY="51.0" prefHeight="3.0" prefWidth="219.0" />
+           </children>
+       </Pane>
+   </children>
 </Pane>

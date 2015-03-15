@@ -29,12 +29,12 @@ public class ListViewPaneController implements Initializable{
     public void initialize(URL pointless, ResourceBundle alsoPointless) {
 
             ResortInfo current = ResortData.getInstance().getResort();
-            Image coverImage = new Image(current.imageUrl, 320, 150, false, true);
+            Image coverImage = new Image(current.imageUrl, 302, 150, false, true);
             resortImage.setImage(coverImage);
             resortName.setText(current.name);
             record1.setText("Distance: " + current.distance + " km");
             record3.setText("Wind: " + current.wind + " m/s");
-            record2.setText("Degrees: " + current.degrees);
+            record2.setText("Degrees: " + current.degrees + " °C");
     }
 
 
