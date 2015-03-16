@@ -64,6 +64,10 @@ public class ResortData {
         return information.get(snowType).get(counter++);
     }
 
+    public ResortInfo getResort(int idx) {
+        return information.get(snowType).get(idx);
+    }
+
     public void reset() {
         counter = 0;
     }

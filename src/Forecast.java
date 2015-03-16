@@ -67,4 +67,8 @@ public class Forecast {
     public void setText(String text) {
         this.text = text;
     }
+
+    public Integer getAvg() {
+        return (int) ((high + low) / 2.0);
+    }
 }

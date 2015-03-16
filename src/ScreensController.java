@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.ResourceBundle;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -36,6 +38,21 @@ public class ScreensController  extends StackPane {
     public boolean loadScreen(String name, String resource) {
         try {
             FXMLLoader myLoader = new FXMLLoader(getClass().getResource(resource));
+            Parent loadScreen = (Parent) myLoader.load();
+            ControlledScreen myScreenControler = ((ControlledScreen) myLoader.getController());
+            myScreenControler.setScreenParent(this);
+            addScreen(name, loadScreen);
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean loadScreen(String name, String resource, ResourceBundle resources) {
+        try {
+            FXMLLoader myLoader = new FXMLLoader(getClass().getResource(resource));
+            myLoader.setResources(resources);
             Parent loadScreen = (Parent) myLoader.load();
             ControlledScreen myScreenControler = ((ControlledScreen) myLoader.getController());
             myScreenControler.setScreenParent(this);

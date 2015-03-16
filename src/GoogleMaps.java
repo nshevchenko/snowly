@@ -9,7 +9,7 @@ import javax.xml.stream.Location;
 public class GoogleMaps {
 
     private WebView googleMap;
-    private LatLng location;
+    //private LatLng location;
     private double latitude, longitude;
 
     public GoogleMaps(WebView map, double latitude, double longitude)
