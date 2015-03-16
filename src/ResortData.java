@@ -30,14 +30,14 @@ public class ResortData {
         for (int i = 0; i < 4; i++)
             information.add(new ArrayList<ResortInfo>(15));
 
-        ResortModel model = new ResortModel();
+        ResortModel model = ResortModel.getInstance();
         setLists(model);
 
     }
 
     private void setLists(ResortModel model) {
         for (int i = 0; i < 4; i++) {
-            ArrayList<Resort> resorts = model.getAllResortsByType(i + 1);
+            ArrayList<Resort> resorts = model.getNearbyResortsByType(51.5f, -0.12f, i + 1);
             ArrayList<ResortInfo> current = information.get(i);
 
             for (int k = 0, j = 0; k < resorts.size(); k++, j++) {
