@@ -20,11 +20,12 @@ public class ScreensFramework extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setResizable(true);
 
+        ResortData.instantiate();
         //Loads all the screens
         ScreensController mainContainer = new ScreensController();
         mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
         mainContainer.loadScreen(ScreensFramework.screen2ID, ScreensFramework.screen2File);
-        mainContainer.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
+        //mainContainer.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
         mainContainer.loadScreen(ScreensFramework.screenResortID, ScreensFramework.screenResortFile);
 
         //Displays the first screen on the display

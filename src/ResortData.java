@@ -1,49 +1,74 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by filipt on 12/03/15.
- */
 public class ResortData {
 
     private static ResortData instance;
 
     public static ResortData getInstance() {
-        if (instance == null)
-            instance = new ResortData();
+        System.out.println("wtf");
 
+        if (instance == null)
+            instantiate();
         return instance;
     }
 
-    List<ResortInfo> information;
+    public static void instantiate() {
+        instance = new ResortData();
+    }
+
     private int counter;
+    private int snowType;
+    private String[] imgUrls = {"img/fjell3.jpg", "img/hafjell.png", "img/alpine-slopes.jpg", "img/resort4.jpg"};
+
+    private ArrayList<ArrayList<ResortInfo>> information;
 
     public ResortData() {
-
-        information = new ArrayList<ResortInfo>();
-
-        information.add(new ResortInfo("Gaustablikk", -6, 5, 62, "img/fjell3.jpg"));
-        information.add(new ResortInfo("A place", -10, 8, 90, "img/hafjell.png"));
-        information.add(new ResortInfo("Hehe", 1, 1, 1, "img/alpine-slopes.jpg"));
         counter = 0;
+        information = new ArrayList<ArrayList<ResortInfo>>(4);
+
+        for (int i = 0; i < 4; i++)
+            information.add(new ArrayList<ResortInfo>(15));
+
+        ResortModel model = new ResortModel();
+        setLists(model);
+
+    }
+
+    private void setLists(ResortModel model) {
+        for (int i = 0; i < 4; i++) {
+            ArrayList<Resort> resorts = model.getAllResortsByType(i + 1);
+            ArrayList<ResortInfo> current = information.get(i);
+
+            for (int k = 0, j = 0; k < resorts.size(); k++, j++) {
+                if (j == 4)
+                    j = 0;
+
+                current.add(new ResortInfo(resorts.get(k), imgUrls[j]));
+            }
+        }
+    }
+
+    public void setSnow(int snow) {
+        snowType = snow;
+        reset();
     }
 
     public boolean hasResort() {
-        if (counter >= information.size())
-           return false;
+        if (counter >= information.get(snowType).size())
+            return false;
         else
             return true;
 
     }
 
     public ResortInfo getResort() {
-        return information.get(counter++);
+        return information.get(snowType).get(counter++);
     }
 
     public void reset() {
         counter = 0;
     }
 
-
-
 }
+

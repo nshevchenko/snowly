@@ -1,19 +1,16 @@
-/**
- * Created by filipt on 12/03/15.
- */
 public class ResortInfo {
 
-    String name;
-    int degrees;
-    int wind;
-    int distance;
+    private Resort data;
+
     String imageUrl;
 
-    public ResortInfo(String name, int degrees, int wind, int distance, String imageUrl) {
-        this.name = name;
-        this.degrees = degrees;
-        this.wind = wind;
-        this.distance = distance;
+    public ResortInfo(Resort resort, String imageUrl) {
+        data = resort;
         this.imageUrl = imageUrl;
     }
+
+    public Resort getResort() {
+        return data;
+    }
 }
+

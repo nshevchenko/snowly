@@ -8,9 +8,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-/**
- * Created by filipt on 12/03/15.
- */
 public class ListViewPaneController implements Initializable{
 
     @FXML
@@ -28,15 +25,17 @@ public class ListViewPaneController implements Initializable{
     @Override
     public void initialize(URL pointless, ResourceBundle alsoPointless) {
 
-            ResortInfo current = ResortData.getInstance().getResort();
-            Image coverImage = new Image(current.imageUrl, 302, 150, false, true);
-            resortImage.setImage(coverImage);
-            resortName.setText(current.name);
-            record1.setText("Distance: " + current.distance + " km");
-            record3.setText("Wind: " + current.wind + " m/s");
-            record2.setText("Degrees: " + current.degrees + " °C");
+        ResortInfo current = ResortData.getInstance().getResort();
+        Resort resort = current.getResort();
+        Image coverImage = new Image(current.imageUrl, 302, 150, false, true);
+        resortImage.setImage(coverImage);
+        resortName.setText(resort.getName());
+        record1.setText("Distance: " + resort.getDistance() / 1000 + " km");
+        record3.setText("Wind: " + resort.getWind() + " m/s");
+        record2.setText("Degrees: " + (resort.getForecast(0).getHigh() + resort.getForecast(0).getLow()) / 2 + " °C");
 
     }
 
 
 }
+

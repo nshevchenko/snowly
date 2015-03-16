@@ -102,6 +102,8 @@ public class Screen1Controller implements Initializable, ControlledScreen {
         }
 
         if(e.getCode().toString().equals("DOWN")) {
+            ResortData.getInstance().setSnow(currentTab);
+            myController.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
             myController.setScreen(ScreensFramework.screenDownID);
         }
         openTab();
