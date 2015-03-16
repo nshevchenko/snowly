@@ -19,6 +19,7 @@ public class ResortData {
     private int counter;
 
     public ResortData() {
+
         information = new ArrayList<ResortInfo>();
 
         information.add(new ResortInfo("Gaustablikk", -6, 5, 62, "img/fjell3.jpg"));
@@ -32,6 +33,7 @@ public class ResortData {
            return false;
         else
             return true;
+
     }
 
     public ResortInfo getResort() {

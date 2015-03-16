@@ -22,9 +22,12 @@ public class Screen2Controller implements Initializable, ControlledScreen {
 
     @FXML private Pane listViewParent;
 
+    private boolean escapeListFlag;
+
     public void initialize(URL url, ResourceBundle rb) {
         listView.getStylesheets().add("css/kill-scroll-bar.css");
         listView.setPrefWidth(320);
+        escapeListFlag = false;
         //loop
         //data.add(FXMLLoader.load(getClass().getResource("list-view-pane.fxml")));
         ObservableList<Pane> data = FXCollections.observableArrayList();
@@ -52,7 +55,18 @@ public class Screen2Controller implements Initializable, ControlledScreen {
         }
 
         if(e.getCode().toString().equals("UP")) {
-            myController.setScreen(ScreensFramework.screen1ID);
+            if ((listView.getSelectionModel().getSelectedIndex() == 0))
+                if (escapeListFlag)
+                    myController.setScreen(ScreensFramework.screen1ID);
+                else
+                    escapeListFlag = true;
+
+            //myController.setScreen(ScreensFramework.screen1ID);
+        }
+
+        if (e.getCode().toString().equals("DOWN")) {
+            if (escapeListFlag)
+                escapeListFlag = false;
         }
     }
 

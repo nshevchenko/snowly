@@ -35,6 +35,7 @@ public class ListViewPaneController implements Initializable{
             record1.setText("Distance: " + current.distance + " km");
             record3.setText("Wind: " + current.wind + " m/s");
             record2.setText("Degrees: " + current.degrees + " °C");
+
     }
 
 
