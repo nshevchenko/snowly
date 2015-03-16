@@ -42,13 +42,6 @@ public class Resort {
             //this.setLatitude(json.getJSONObject("item").getDouble("lat"));
             //this.setLongitude(json.getJSONObject("item").getDouble("long"));
 
-
-            // ******** Dev
-
-            // ResortModel.setLatLongForID(this.id, this.name, this.getLatitude(), this.getLongitude());
-
-            // ******** Dev end
-
             JSONArray jsonForecasts = json.getJSONObject("item").getJSONArray("forecast");
 
             for(int i=0; i<jsonForecasts.length(); i++) {
