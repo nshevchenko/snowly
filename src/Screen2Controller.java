@@ -41,6 +41,7 @@ public class Screen2Controller implements Initializable, ControlledScreen {
                         System.out.println("complete disaster");
                     }
         listView.setItems(data);
+        listView.getSelectionModel().selectFirst();
     }
 
     //Sets parent screen.
