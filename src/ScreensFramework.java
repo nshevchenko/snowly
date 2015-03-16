@@ -15,7 +15,6 @@ public class ScreensFramework extends Application {
     public static String screenResortID = "resort";
     public static String screenResortFile = "resort.fxml";
 
-
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setResizable(true);
