@@ -9,12 +9,13 @@ import org.json.*;
 /**
  * Created by hs on 12/03/15.
  */
+
 public class Resort {
 
     // wind, distance, degress
 
     private String name, city, link;
-    private double distance, wind,latitude,longitude;
+    private double id, distance, wind, latitude, longitude;
     private Forecast[] forecast = new Forecast[5];
 
     public Resort(String name, String city) {
@@ -29,35 +30,46 @@ public class Resort {
     * */
     public boolean init() {
 
-        String result = null;
-
-        String yql = URLEncoder.encode("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"" + this.getCity() + "\") and u='c'");
+        String result;
+        String yql;
 
         try {
+            yql = URLEncoder.encode("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"" + this.getCity() + "\") and u='c'");
             result = httpGet("https://query.yahooapis.com/v1/public/yql?q=" + yql + "&format=json");
+            JSONObject json = new JSONObject(result).getJSONObject("query").getJSONObject("results").getJSONObject("channel");
+            this.setWind(json.getJSONObject("wind").getDouble("speed"));
+
+            this.setLatitude(json.getJSONObject("item").getDouble("lat"));
+            this.setLongitude(json.getJSONObject("item").getDouble("long"));
+
+            // ******** Dev
+
+            ResortModel.setLatLongForID(this.id, this.name, this.getLatitude(), this.getLongitude());
+
+            // ******** Dev end
+
+            JSONArray jsonForecasts = json.getJSONObject("item").getJSONArray("forecast");
+
+            for(int i=0; i<jsonForecasts.length(); i++) {
+                JSONObject jsonForecast = jsonForecasts.getJSONObject(i);
+                this.forecast[i] = new Forecast(
+                        jsonForecast.getInt("code"),
+                        jsonForecast.getString("date"),
+                        jsonForecast.getString("day"),
+                        jsonForecast.getInt("high"),
+                        jsonForecast.getInt("low"),
+                        jsonForecast.getString("text")
+                );
+            }
+        } catch(JSONException e) {
+            //e.printStackTrace();
+            return false;
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            return false;
         }
 
-        JSONObject json = new JSONObject(result).getJSONObject("query").getJSONObject("results").getJSONObject("channel");
-        this.setWind(json.getJSONObject("wind").getDouble("speed"));
-        this.setLatitude(json.getJSONObject("item").getDouble("lat"));
-        this.setLongitude(json.getJSONObject("item").getDouble("long"));
-        JSONArray jsonForecasts = json.getJSONObject("item").getJSONArray("forecast");
-
-        for(int i=0; i<jsonForecasts.length(); i++) {
-            JSONObject jsonForecast = jsonForecasts.getJSONObject(i);
-            this.forecast[i] = new Forecast(
-                    jsonForecast.getInt("code"),
-                    jsonForecast.getString("date"),
-                    jsonForecast.getString("day"),
-                    jsonForecast.getInt("high"),
-                    jsonForecast.getInt("low"),
-                    jsonForecast.getString("text")
-            );
-        }
-
-        return (result != null) ? true : false;
+        return true;
 
     }
 
@@ -140,5 +152,12 @@ public class Resort {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public void setId(double id) {
+        this.id = id;
+    }
+    public double getId() {
+        return this.id;
     }
 }
