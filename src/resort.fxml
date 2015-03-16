@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -17,42 +18,79 @@
          <children>
             <Pane fx:id="forecast1" prefHeight="84.0" prefWidth="61.0">
                <children>
-                  <Label fx:id="day1" layoutX="16.0" layoutY="6.0" text="Label" />
-                  <Label fx:id="temp1" layoutX="18.0" layoutY="71.0" text="Label" />
+                  <Label fx:id="day1" layoutX="16.0" layoutY="6.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="temp1" layoutX="18.0" layoutY="71.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="weatherImg1" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
             <Pane fx:id="forecast2" prefHeight="84.0" prefWidth="67.0">
                <children>
-                  <Label fx:id="day2" layoutX="19.0" layoutY="6.0" text="Label" />
-                  <Label fx:id="temp2" layoutX="19.0" layoutY="71.0" text="Label" />
+                  <Label fx:id="day2" layoutX="19.0" layoutY="6.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="temp2" layoutX="19.0" layoutY="71.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="weatherImg2" fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
             <Pane fx:id="forecast3" prefHeight="84.0" prefWidth="69.0">
                <children>
-                  <Label fx:id="temp3" layoutX="20.0" layoutY="71.0" text="Label" />
+                  <Label fx:id="temp3" layoutX="20.0" layoutY="71.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="weatherImg3" fitHeight="35.0" fitWidth="35.0" layoutX="16.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="day3" layoutX="20.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="day3" layoutX="20.0" layoutY="6.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                </children>
             </Pane>
             <Pane fx:id="forecast4" prefHeight="84.0" prefWidth="67.0">
                <children>
-                  <Label fx:id="temp4" layoutX="19.0" layoutY="71.0" text="Label" />
+                  <Label fx:id="temp4" layoutX="19.0" layoutY="71.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="weatherImg4" fitHeight="35.0" fitWidth="35.0" layoutX="18.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="day4" layoutX="22.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="day4" layoutX="22.0" layoutY="6.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                </children>
             </Pane>
             <Pane fx:id="forecast5" prefHeight="84.0" prefWidth="66.0">
                <children>
-                  <Label fx:id="temp5" layoutX="18.0" layoutY="71.0" text="Label" />
+                  <Label fx:id="temp5" layoutX="18.0" layoutY="71.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                   <ImageView fx:id="weatherImg5" fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="day5" layoutX="18.0" layoutY="6.0" text="Label" />
+                  <Label fx:id="day5" layoutX="18.0" layoutY="6.0" text="Label" textFill="#726d6d">
+                     <font>
+                        <Font name="Verdana" size="15.0" />
+                     </font></Label>
                </children>
             </Pane>
          </children>
       </HBox>
-      <Label fx:id="distanceLabel" layoutX="32.0" layoutY="325.0" text="Label" />
-      <Label fx:id="windLabel" layoutX="32.0" layoutY="361.0" text="Label" />
+      <Label fx:id="distanceLabel" layoutX="32.0" layoutY="407.0" text="Label" textFill="#726d6d">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font></Label>
+      <Label fx:id="windLabel" layoutX="32.0" layoutY="443.0" text="Label" textFill="#726d6d">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font></Label>
+      <ImageView fx:id="mapView" fitHeight="127.0" fitWidth="332.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>

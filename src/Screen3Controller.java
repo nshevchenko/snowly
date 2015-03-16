@@ -7,6 +7,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,6 +39,8 @@ public class Screen3Controller implements Initializable, ControlledScreen {
     @FXML private Label nameLabel;
     @FXML private Label distanceLabel;
     @FXML private Label windLabel;
+
+    @FXML private ImageView mapView;
 
 
 
@@ -87,6 +93,14 @@ public class Screen3Controller implements Initializable, ControlledScreen {
         weatherImg3.setImage(new Image(weatherUrls[mapWeatherIcons(2)]));
         weatherImg4.setImage(new Image(weatherUrls[mapWeatherIcons(3)]));
         weatherImg5.setImage(new Image(weatherUrls[mapWeatherIcons(4)]));
+
+        System.out.println(currentResort.getLatitude());
+        System.out.println(currentResort.getLongitude());
+
+        Image img = new Image("https://maps.googleapis.com/maps/api/staticmap?center=" + currentResort.getLatitude() + "," + currentResort.getLongitude() + "&zoom=9&size=260x120&maptype=roadmap\">",
+                320, 127, false, true);
+
+        mapView.setImage(img);
     }
 
     public int mapWeatherIcons(int day) {
