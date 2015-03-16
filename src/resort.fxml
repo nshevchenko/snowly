@@ -8,7 +8,7 @@
 <Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#goToScreen" prefHeight="480.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen3Controller">
    <children>
       <ImageView fx:id="resortImage" fitHeight="182.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="label1" layoutX="32.0" layoutY="294.0" text="Label" />
+      <Label fx:id="label1" layoutX="16.0" layoutY="117.0" prefHeight="27.0" prefWidth="220.0" style="-fx-background-color: black; -fx-opacity: 55%;" text="Label" />
       <HBox fx:id="forecast" layoutY="180.0" prefHeight="93.0" prefWidth="320.0">
          <children>
             <Pane fx:id="forecast1" prefHeight="84.0" prefWidth="61.0">
