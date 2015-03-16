@@ -6,8 +6,6 @@ public class ResortData {
     private static ResortData instance;
 
     public static ResortData getInstance() {
-        System.out.println("wtf");
-
         if (instance == null)
             instantiate();
         return instance;
