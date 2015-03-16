@@ -39,12 +39,13 @@ public class Resort {
             JSONObject json = new JSONObject(result).getJSONObject("query").getJSONObject("results").getJSONObject("channel");
             this.setWind(json.getJSONObject("wind").getDouble("speed"));
 
-            this.setLatitude(json.getJSONObject("item").getDouble("lat"));
-            this.setLongitude(json.getJSONObject("item").getDouble("long"));
+            //this.setLatitude(json.getJSONObject("item").getDouble("lat"));
+            //this.setLongitude(json.getJSONObject("item").getDouble("long"));
+
 
             // ******** Dev
 
-            ResortModel.setLatLongForID(this.id, this.name, this.getLatitude(), this.getLongitude());
+            // ResortModel.setLatLongForID(this.id, this.name, this.getLatitude(), this.getLongitude());
 
             // ******** Dev end
 
