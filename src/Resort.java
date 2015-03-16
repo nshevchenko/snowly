@@ -18,10 +18,12 @@ public class Resort {
     private double id, distance, wind, latitude, longitude;
     private Forecast[] forecast = new Forecast[5];
 
-    public Resort(String name, String city) {
+    public Resort(String name, String city, double latitude, double longitude) {
 
         this.name = name;
         this.city = city;
+        this.latitude = latitude;
+        this.longitude = longitude;
 
     }
 
