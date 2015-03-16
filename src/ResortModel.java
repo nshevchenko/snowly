@@ -114,7 +114,11 @@ public class ResortModel {
 
     }
 
-    public ArrayList<Resort> getAllTypeOfResort(int type, float latitude, float longitude) {
+    public ArrayList<Resort> getAllResortsByType(int type) {
+        return this.getAllResortsByType(type, 51.515977f, (float) -0.0183201); // London
+    }
+
+    public ArrayList<Resort> getAllResortsByType(int type, float latitude, float longitude) {
 
         PreparedStatement statement = null;
         ArrayList<Resort> result = new ArrayList<Resort>();
