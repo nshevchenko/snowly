@@ -25,7 +25,7 @@ public class ScreensFramework extends Application {
         mainContainer.loadScreen(ScreensFramework.screen1ID, ScreensFramework.screen1File);
         mainContainer.loadScreen(ScreensFramework.screen2ID, ScreensFramework.screen2File);
         //mainContainer.loadScreen(ScreensFramework.screenDownID, ScreensFramework.screenDownFile);
-        mainContainer.loadScreen(ScreensFramework.screenResortID, ScreensFramework.screenResortFile);
+        //mainContainer.loadScreen(ScreensFramework.screenResortID, ScreensFramework.screenResortFile);
 
         //Displays the first screen on the display
         mainContainer.setScreen(ScreensFramework.screen1ID);

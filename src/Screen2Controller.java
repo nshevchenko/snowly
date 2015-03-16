@@ -11,6 +11,7 @@ import javafx.fxml.LoadException;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Enumeration;
 import java.util.ResourceBundle;
 
 public class Screen2Controller implements Initializable, ControlledScreen {
@@ -52,6 +53,40 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     //Key listener for keyboard input, to navigate the app.
     public void goToScreen(KeyEvent e) {
         if(e.getCode().toString().equals("ENTER")) {
+            int idx = listView.getSelectionModel().getSelectedIndex();
+            final ResortInfo info = ResortData.getInstance().getResort(idx);
+
+            ResourceBundle resources = new ResourceBundle() {
+                @Override
+                protected Object handleGetObject(String key) {
+                    if (key.equals("resort"))
+                        return info;
+                    else return null;
+
+                }
+
+                @Override
+                public Enumeration<String> getKeys() {
+                    return new Enumeration<String>() {
+                        boolean returned = false;
+                        @Override
+                        public boolean hasMoreElements() {
+                            return returned;
+                        }
+
+                        @Override
+                        public String nextElement() {
+                            if (!returned) {
+                                returned = true;
+                                return "resort";
+                            }
+                            else return null;
+                        }
+                    };
+                }
+            };
+
+            myController.loadScreen(ScreensFramework.screenResortID, ScreensFramework.screenResortFile, resources);
             myController.setScreen(ScreensFramework.screenResortID);
         }
 

@@ -32,7 +32,7 @@ public class ListViewPaneController implements Initializable{
         resortName.setText(resort.getName());
         record1.setText(String.format("Distance: %.2f km", resort.getDistance() / 1000.0));
         record3.setText("Wind: " + resort.getWind() + " m/s");
-        record2.setText("Degrees: " + (resort.getForecast(0).getHigh() + resort.getForecast(0).getLow()) / 2 + " °C");
+        record2.setText("Degrees: " + resort.getForecast(0).getAvg() + " °C");
 
     }
 

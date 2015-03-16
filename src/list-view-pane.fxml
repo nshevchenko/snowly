@@ -9,7 +9,7 @@
 <Pane maxHeight="-Infinity" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListViewPaneController">
    <children>
       <ImageView fx:id="resortImage" fitHeight="150.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="resortName" layoutY="107.0" prefHeight="37.0" prefWidth="220.0"  textFill="WHITE" style="-fx-background-color: black; -fx-opacity: 55%;" >
+      <Label fx:id="resortName" layoutY="107.0" prefHeight="37.0" prefWidth="302.0"  textFill="WHITE" style="-fx-background-color: black; -fx-opacity: 55%;" >
          <font>
             <Font name="Verdana" size="26.0" />
          </font>
