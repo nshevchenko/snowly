@@ -13,8 +13,8 @@ public class Resort {
 
     // wind, distance, degress
 
-    private String name, city;
-    private double distance, wind;
+    private String name, city, link;
+    private double distance, wind,latitude,longitude;
     private Forecast[] forecast = new Forecast[5];
 
     public Resort(String name, String city) {
@@ -40,7 +40,9 @@ public class Resort {
         }
 
         JSONObject json = new JSONObject(result).getJSONObject("query").getJSONObject("results").getJSONObject("channel");
-        this.wind = json.getJSONObject("wind").getDouble("speed");
+        this.setWind(json.getJSONObject("wind").getDouble("speed"));
+        this.setLatitude(json.getJSONObject("item").getDouble("lat"));
+        this.setLongitude(json.getJSONObject("item").getDouble("long"));
         JSONArray jsonForecasts = json.getJSONObject("item").getJSONArray("forecast");
 
         for(int i=0; i<jsonForecasts.length(); i++) {
@@ -108,11 +110,35 @@ public class Resort {
         return wind;
     }
 
-    public void setDistance(int distance) {
+    public void setDistance(double distance) {
         this.distance = distance;
     }
 
-    public void setWind(int wind) {
+    public void setWind(double wind) {
         this.wind = wind;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }
