@@ -66,7 +66,7 @@ public class ResortModel {
                 String city = rs.getString("address");
                 double resortLat = rs.getDouble("latitude");
                 double resortLong = rs.getDouble("longitude");
-                Resort resort = new Resort(name, city, latitude, longitude);
+                Resort resort = new Resort(name, city, resortLat, resortLong);
 
                 resort.setDistance(distFrom((float) latitude, (float) longitude, (float) resortLat, (float) resortLong));
 
